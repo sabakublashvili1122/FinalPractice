@@ -1,1 +1,14 @@
-<p>note-list works!</p>
+<table>
+    <thead>
+        <th>Title</th>
+        <th>Create Date</th>
+    </thead>
+    <tbody>
+        @for(note of notes(); track note.id){
+            <tr [class]="{'important': note.isImportant}">
+                <td>{{ getTitle(note.title) }}</td>
+                <td>{{ note.createDate | date: 'dd/MM/yyyy' }}</td>
+            </tr>
+        }
+    </tbody>
+</table>

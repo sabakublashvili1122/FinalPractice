@@ -8,7 +8,7 @@ import { Note } from './note';
 export class NoteService {
   http = inject(HttpClient);
 
-  apiUrl = 'http://localhost:3000/notes';
+  apiUrl = 'http://localhost:3000';
 
   getNotes(){
     return this.http.get<Note[]>(`${this.apiUrl}/notes`);
