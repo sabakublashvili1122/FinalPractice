@@ -2,10 +2,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { NoteService } from '../note-service';
 import { Note } from '../note';
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-note-list',
-  imports: [DatePipe],
+  imports: [DatePipe, RouterLink],
   templateUrl: './note-list.html',
   styleUrl: './note-list.css',
 })
